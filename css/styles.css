@@ -1,0 +1,80 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --main-transition: 0.6s
+}
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    width: auto;
+    height: 100vh;
+    background-color: var(--dark-blue);
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 15px;
+}
+.container .title {
+    text-transform: uppercase;
+    color: var(--neon-green);
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.container q {
+    color: var(--light-cyan);
+    font-size: 28px;
+}
+.container >img {
+    margin: 30px auto;
+}
+.container button {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neon-green);
+    transition: var(--main-transition);
+}
+.container button:hover {
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(82,255,168,0.9);
+    -moz-box-shadow: 0px 0px 25px 10px rgba(82,255,168,0.9);
+    box-shadow: 0px 0px 25px 10px rgba(82,255,168,0.9);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .container {
+        width: 370px;
+    }
+    .container >img {
+        content: url(../images/pattern-divider-mobile.svg);
+    }
+    .container button {
+        width: 70px;
+        height: 70px;
+    }
+}
